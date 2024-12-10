@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: aap-showcases-entities
+  description: A collection of AAP show cases entities
+spec:
+  type: url
+  targets:
+    - ./templates/network-restore-config.yaml
+    - ./templates/rhel-configure-service.yaml
+    - ./templates/windows-operations-create-iis.yaml
+    - ./templates/cloud-configure-ec2.yaml
+    - ./templates/network-create-full-network-backup.yaml
+    - ./templates/windows-operations-delete-iis.yaml
+    - ./templates/cloud-terminate-ec2.yaml
+    - ./templates/rhel-update-time-servers.yaml
