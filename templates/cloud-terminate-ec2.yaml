@@ -57,7 +57,6 @@ spec:
       required:
         - aws_region
         - instance_name
-        - instance_type
       description: Terminate EC2 instance in the Amazon cloud
       properties:
         aws_region:
