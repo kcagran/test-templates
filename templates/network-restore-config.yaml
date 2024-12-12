@@ -81,7 +81,7 @@ spec:
             GH_TOKEN: ${{ parameters.ghToken }}
             file_path: ${{ parameters.filePath }}
           template:
-            id: 422
+            id: 552
             name: Network Operations / Restore Config
   output:
     text:

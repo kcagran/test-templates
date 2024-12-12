@@ -106,7 +106,7 @@ spec:
             GH_EMAIL: ${{ parameters.ghEmail }}
             backup_file_name: ${{ parameters.backupFileName }}
           template:
-            id: 421
+            id: 551
             name: Network Operations / Create Full Network Backup
   output:
     text:

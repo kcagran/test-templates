@@ -91,7 +91,7 @@ spec:
             service_state: ${{ parameters.serviceState }}
             service_enabled: ${{ parameters.serviceEnabled }}
           template:
-            id: 336
+            id: 559
             name: RHEL / Configure Services
   output:
     text:

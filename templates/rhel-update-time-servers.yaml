@@ -90,7 +90,7 @@ spec:
             restart_service: ${{ parameters.serviceRestartConfirmation }}
             notification_email: ${{ parameters.notificationEmail }}
           template:
-            id: 335
+            id: 560
             name: RHEL / Update RHEL Time Servers
   output:
     text:
