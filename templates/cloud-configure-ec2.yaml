@@ -36,13 +36,8 @@ spec:
           ui:field: AAPResourcePicker
         credentials:
           title: Credentials
-          description: Select credentials for accessing the nodes this job will be ran
-            against. You can only select one credential of each type. For
-            machine credentials (SSH), checking "Prompt on launch" without
-            selecting credentials will require you to select a machine
-            credential at run time. If you select credentials and check "Prompt
-            on launch", the selected credential(s) become the defaults that can
-            be updated at run time.
+          description: Select credentials for accessing AWS. The credentials need to be of
+            type "Amazon Web Services".
           type: array
           ui:field: AAPResourcePicker
           resource: credentials
@@ -87,8 +82,9 @@ spec:
             rows: 5
         key_name:
           title: Key Pair Name
-          description: Name of key pair to use or create for SSH access to the EC2
-            instance. Defaults to '{{ instance_name }}-key'
+          description: Name of key pair to use for SSH access to the EC2 instance. If the
+            key does not exist or is not provided, the instance will not be
+            accessible via SSH.
           type: string
           ui:options:
             rows: 5
@@ -188,7 +184,7 @@ spec:
             sg_rules: ${{ parameters.sg_rules  }}
             external_access: ${{ parameters.external_access  }}
           template:
-            id: 504
+            id: 674
             name: AWS Operations / Create EC2 Instance
   output:
     text:

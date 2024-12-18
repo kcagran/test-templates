@@ -80,7 +80,7 @@ spec:
             iis_name: ${{ parameters.iisName }}
             iis_remove_all: ${{ parameters.iisRemove }}
           template:
-            id: 356
+            id: 671
             name: Windows Operations / Delete IIS
   output:
     text:

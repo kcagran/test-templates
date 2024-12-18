@@ -37,13 +37,8 @@ spec:
           ui:field: AAPResourcePicker
         credentials:
           title: Credentials
-          description: Select credentials for accessing the nodes this job will be ran
-            against. You can only select one credential of each type. For
-            machine credentials (SSH), checking "Prompt on launch" without
-            selecting credentials will require you to select a machine
-            credential at run time. If you select credentials and check "Prompt
-            on launch", the selected credential(s) become the defaults that can
-            be updated at run time.
+          description: Select credentials for accessing AWS. The credentials need to be of
+            type "Amazon Web Services".
           type: array
           ui:field: AAPResourcePicker
           resource: credentials
@@ -61,26 +56,26 @@ spec:
       properties:
         aws_region:
           title: AWS Region
-          description: AWS region where resources should be created
+          description: AWS region where resources should be deleted
           type: string
           ui:options:
             rows: 5
         instance_name:
           title: Instance Name
-          description: Name of EC2 instance to create
+          description: Name of EC2 instance to delete
           type: string
           ui:options:
             rows: 5
         key_name:
           title: Key Pair Name
-          description: Name of key pair to use or create for SSH access to the EC2
-            instance. Defaults to '{{ instance_name }}-key'
+          description: Name of key pair to delete for SSH access to the EC2 instance.
+            Defaults to '{{ instance_name }}-key'
           type: string
           ui:options:
             rows: 5
         vpc_name:
           title: VPC Name
-          description: Name of the VPC to create. Defaults to '{{instance_name}}-vpc'
+          description: Name of the VPC to delete. Defaults to '{{instance_name}}-vpc'
           type: string
           ui:options:
             rows: 5
@@ -100,7 +95,7 @@ spec:
             key_name: ${{ parameters.key_name  }}
             vpc_name: ${{ parameters.vpc_name  }}
           template:
-            id: 505
+            id: 675
             name: AWS Operations / Terminate EC2 Instance
   output:
     text:

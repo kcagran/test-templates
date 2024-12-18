@@ -92,7 +92,7 @@ spec:
             iis_port: ${{ parameters.iisPort }}
             iis_test_message: ${{ parameters.iisTestMessage }}
           template:
-            id: 425
+            id: 670
             name: Windows Operations / Create IIS
   output:
     text:
